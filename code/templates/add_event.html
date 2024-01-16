@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Event{% endblock %}
+
+{% block content %}
+    <h1 style="text-align: center;">Add a New Event</h1>
+    <form method="post" action="{{ url_for('add_event') }}" style="max-width: 500px; margin: auto; text-align: left;">
+        <label for="event_name">Event Name:</label>
+        <input type="text" id="event_name" name="event_name" class="form-input" required><br>
+
+        <label for="event_location">Event Location:</label>
+        <input type="text" id="event_location" name="event_location" class="form-input" required><br>
+
+        <label for="event_date">Event Date:</label>
+        <input type="date" id="event_date" name="event_date" class="form-input" required><br>
+
+        <label for="event_description">Event Description:</label>
+        <textarea id="event_description" name="event_description" class="form-input" style="height: 150px; width: 100%;" required></textarea><br>
+
+        <label for="event_type">Event Type:</label>
+        <select id="event_type" name="event_type" class="form-input" required>
+            <option value="Theatrical performance">Theatrical performance</option>
+            <option value="Musical concert">Musical concert</option>
+            <option value="Festival">Festival</option>
+            <option value="Educational event">Educational event</option>
+            <option value="Art exhibition">Art exhibition</option>
+        </select><br>
+
+        <input type="submit" value="Add Event" class="submit-button">
+    </form>
+    <p style="text-align: center; margin-top: 20px;"><a href="{{ url_for('events') }}" class="back-link">Back to Events</a></p>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Seminar Website</h1>
+    <p>Welcome to my website, where you can find all the events of our city, both cultural and entertaining</p>
+    <p>Please use our site navigation, or if you know the name of the event, you can use our search engine to find it right here.</p>
+
+    <form method="post" action="{{ url_for('index') }}">
+        <label for="search_query">Search Events:</label>
+        <input type="text" id="search_query" name="search_query" required>
+        <input type="submit" value="Search">
+    </form>
+
+    {% if search_results %}
+        {% if cache_message %}
+            <p style="color: green;">{{ cache_message }}</p>
+        {% endif %}
+
+        <h2>Search Results for '{{ query }}'</h2>
+        <ul>
+            {% for event in search_results %}
+                <li><b>{{ event.location }}</b> <i>{{ event.date }}</i> <i>{{ event.type }}</i>  <br> {{ event.description }}  </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if recommendations %}
+        <h2>Recommended Events</h2>
+        <p>Based on your search, you might like the following activities, check them out </p>
+        <ul>
+            {% for event in recommendations %}
+                <li><b>{{ event.name }}</b> - <i>{{ event.location }}</i> <i>{{ event.date }}</i> <i>{{ event.type }}</i>  <br> {{ event.description }}  </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
