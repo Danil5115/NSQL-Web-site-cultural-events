@@ -48,7 +48,7 @@ Embrace the power of containerization with Docker, simplifying deployment and en
 
 ### Home Page
 
-![Home Page]()
+![Home Page](https://github.com/Danil5115/NSQL-Web-site-cultural-events/blob/main/code/home.png)
 
 The home page welcomes users, providing a search engine to find events and displaying recommendations based on their preferences.
 
