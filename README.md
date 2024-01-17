@@ -54,12 +54,19 @@ The home page welcomes users, providing a search engine to find events and displ
 
 ### Events Page
 
-![Events Page]()
+![Events Page](https://github.com/Danil5115/NSQL-Web-site-cultural-events/blob/main/code/events.png)
 
 The events page showcases upcoming cultural events, providing detailed information about each event.
 
 ### Add Event Page
 
-![Add Event Page]()
+![Add Event Page](https://github.com/Danil5115/NSQL-Web-site-cultural-events/blob/main/code/add_event.png)
 
 Users can contribute to the platform by adding new events, specifying details such as event name, location, date, description, and type.
+
+### Recommendations from neo4j and their links
+![Recommendations](https://github.com/Danil5115/NSQL-Web-site-cultural-events/blob/main/code/recomendation.png)
+
+### Docker
+![Docker](https://github.com/Danil5115/NSQL-Web-site-cultural-events/blob/main/code/Docker.png)
+
